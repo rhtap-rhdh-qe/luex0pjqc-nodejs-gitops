@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: luex0pjqc-nodejs-gitops
+  description: This is GitOps manifest for luex0pjqc-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: luex0pjqc-nodejs
+    backstage.io/kubernetes-id: luex0pjqc-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: luex0pjqc-nodejs   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:luex0pjqc-nodejs
